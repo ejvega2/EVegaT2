@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EVegaT2.Vistas.vInicio"
+             Title="vInicio">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Image
+                x:Name="img"
+                Source="uisrael.png"
+                HeightRequest="100"
+                />
+
+            <!-- Línea -->
+            <BoxView
+            Color="Blue"
+            HeightRequest="1"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="End" />
+            
+            <Label
+                Text = "Sistema de Calificaciones UIsrael"
+                TextColor="Blue"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center">
+            </Label>
+
+            <Picker x:Name="pkNombreEstudiantes" Title="Estudiantes:">
+
+                <Picker.Items>
+                    <x:String>Erik Vega</x:String>
+                    <x:String>Jose Chusin</x:String>
+                    <x:String>Manuel Alvarado</x:String>
+                    <x:String>Marco Polo</x:String>
+                    <x:String>Elsa Marin</x:String>
+                </Picker.Items>
+
+            </Picker>
+
+            <Entry x:Name="txtNotaSeg1"
+                    Placeholder="Ingrese nota de Seguimiento 1: "
+                    MaxLength="2"
+                    Keyboard="Numeric"/>
+
+            <Entry x:Name="txtNotaEx1"
+                    Placeholder="Ingrese nota de Examen 1: "
+                    MaxLength="2"
+                    Keyboard="Numeric"/>
+
+            <!-- Línea -->
+            <BoxView
+                    Color="Blue"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End" />
+
+            <Entry x:Name="txtNotaSeg2"
+                    Placeholder="Ingrese nota de Seguimiento 2: "
+                    MaxLength="2"
+                    Keyboard="Numeric"/>
+
+            <Entry x:Name="txtNotaEx2"
+                    Placeholder="Ingrese nota de Examen 2: "
+                    MaxLength="2"
+                    Keyboard="Numeric"/>
+
+            <Label Text="Seleccione fecha de reporte"/>
+
+            <DatePicker x:Name="dpFecha" Date="04/13/2024" Format="MM/dd/yyyy"/>
+
+            <Button x:Name="btnPickerest"
+                Text="Ver estudiante seleccionado"
+                Clicked="btnPickerest_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
