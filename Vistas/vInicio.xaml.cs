@@ -2,9 +2,11 @@ namespace EVegaT2.Vistas;
 
 public partial class vInicio : ContentPage
 {
-	public vInicio()
+	public vInicio(string usuario)
 	{
 		InitializeComponent();
+        DisplayAlert("Alerta", "Bienvenido "+ usuario, "Cerrar");
+        lblUsuario.Text = "Usuario Conectado: "+usuario;
 	}
 
     private void btnPickerest_Clicked(object sender, EventArgs e)

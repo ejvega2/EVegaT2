@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Vistas.vInicio(); //Cambio la pagina de ejecucion
+            MainPage = new NavigationPage (new Vistas.IniGrid()); //Cambio la pagina de ejecucion
         }
     }
 }
